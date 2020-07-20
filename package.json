@@ -1,0 +1,19 @@
+{
+  "name": "optimize-images",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "scripts": {
+    "predeploy": "rm -rf node_modules/sharp && npm install --platform=linux --arch=x64 --target=12.16.2 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rm -rf node_modules/sharp && npm install sharp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sharp": "^0.25.4",
+    "aws-sdk": ">= 2.0.9",
+    "node-uuid": ">= 1.4.1"
+  }
+}
